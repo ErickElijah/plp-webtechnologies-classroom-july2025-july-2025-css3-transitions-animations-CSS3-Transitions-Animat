@@ -1,0 +1,88 @@
+/* ================================
+   Global Styles
+   ================================ */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+
+/* ================================
+   Part 1A: Button with Transition
+   ================================ */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  margin: 20px;
+  border: none;
+  border-radius: 6px;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+
+/* Smooth hover transition */
+button:hover {
+  background: coral;
+  transform: scale(1.1);
+}
+
+/* ================================
+   Part 1B: Box with Triggered Animation
+   ================================ */
+#box {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background: steelblue;
+  border-radius: 10px;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+/* Hover animation only with CSS */
+#box:hover {
+  transform: rotate(15deg) scale(1.2);
+  background: purple;
+}
+
+/* Keyframe animation: move and fade */
+@keyframes moveAndFade {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-120px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Class that JS will add/remove */
+.animate {
+  animation: moveAndFade 2s ease-in-out;
+}
+
+/* ================================
+   Part 1C: Continuous Animation Example
+   ================================ */
+#spinner {
+  margin: 40px auto;
+  border: 8px solid #ddd;
+  border-top: 8px solid teal;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+
+  /* Continuous CSS animation */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
